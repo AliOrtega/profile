@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(226, 241, 231); /* Fondo del body */
+    color: #000000; /* Texto negro */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(226, 241, 231); /* Mismo color de fondo que el body */
+}
+
+header .logo {
+    flex-shrink: 0; /* Evita que el logo se reduzca */
+    padding-bottom: 5%;
+}
+
+header .logo img {
+    width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    border-radius: 50%;
+}
+
+header nav {
+    flex-grow: 1; /* Permite que el nav ocupe el espacio disponible */
+    display: flex;
+    justify-content: flex-end; /* Coloca el menú a la derecha */
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+header nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: rgb(104, 126, 255);
+}
+
+/* Main Styles */
+main {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: rgb(104, 126, 255);
+}
+
+/* Grid Styles */
+.grid-container {
+    display: flex;
+    gap: 10px;
+}
+
+.grid-item {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(152, 228, 255);
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 50%;
+    height: 100px;
+    background-color: rgb(128, 179, 255);
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Section 3 Styles */
+.section3 .left {
+    float: left;
+    width: 50%;
+}
+
+.section3 .right {
+    float: right;
+    width: 50%;
+}
+
+.section3 button {
+    padding: 10px 20px;
+    background-color: rgb(182, 255, 250);
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Esquinas redondeadas */
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(226, 241, 231); /* Mismo color de fondo que el body */
+}
+
+footer .contact-info {
+    width: 50%;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 10px;
+}
+
+footer .social {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(128, 179, 255);
+    border-radius: 10px; /* Esquinas redondeadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social a {
+    color: #000000;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: rgb(104, 126, 255);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header nav {
+        justify-content: center; /* Centra los elementos del menú */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        width: 100%;
+        justify-content: center; /* Centra los elementos del menú */
+    }
+
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .section3 .left,
+    .section3 .right {
+        width: 100%;
+        float: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
